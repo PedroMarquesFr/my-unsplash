@@ -1,13 +1,14 @@
-import React from 'react';
-import './App.css';
-import Routes from './routes';
-import {searchByQuery} from './services/api';
+import React from "react";
+import "./App.css";
+import Routes from "./routes";
+import PhotosContext from "./contextAPI/PhotosContext";
 
 function App() {
   return (
     <div className="App">
-      {searchByQuery('office')}
-      <Routes/>
+      <PhotosContext>
+        <Routes />
+      </PhotosContext>
     </div>
   );
 }
