@@ -8,12 +8,13 @@ const Home: React.FC = () => {
   const { isFetching, photoArray, handleFetchByQuery, doesDataExists } = useContext(Context);
 
   useEffect(() => {
-    handleFetchByQuery('test');
+    handleFetchByQuery('sugar');
   }, []);
 
   return (
     <Container>
-      {doesDataExists && <p>{photoArray[0].total}</p>}
+      {console.log(photoArray)}
+      {doesDataExists && <ImagesWrapper photoArray = {photoArray}/>}
       {isFetching && <span>Loading...</span>}
       
     </Container>
