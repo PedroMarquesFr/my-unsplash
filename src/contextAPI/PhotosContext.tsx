@@ -18,9 +18,9 @@ const PhotosContext: React.FC = ({ children }) => {
   };
 
   const addFav = (newFav: image) => {
-    if(!favs.includes(newFav)) return false;
-    setFavs([...favs, newFav]);
-    return true;
+    if (favs.find(({ id }) => (id === newFav.id)) === undefined) {
+      setFavs([...favs, newFav]);
+    }
   };
 
   const contextData = {

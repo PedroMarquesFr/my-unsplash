@@ -3,7 +3,7 @@ export interface ContextData {
   doesDataExists: boolean;
   isFetching: boolean;
   handleFetchByQuery: (term: string) => void;
-  addFav: (newFav:image) => boolean;
+  addFav: (newFav:image) => void;
   favs:image[] | any[];
 }
 
