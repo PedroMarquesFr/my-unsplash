@@ -7,11 +7,9 @@ import { Container } from "./styles";
 const ImagesWrapper: React.FC<{ photoArray: image[] }> = ({ photoArray }) => {
   return (
     <Container>
-      {photoArray.map(({ urls, alt_description, links }) => (
+      {photoArray.map((image:image) => (
         <ImagePrev
-          src={urls.regular}
-          alt={alt_description}
-          link={links.download}
+          image={image}
         />
       ))}
     </Container>

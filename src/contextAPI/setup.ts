@@ -6,6 +6,8 @@ const Context = createContext<ContextData>({
   doesDataExists: false,
   isFetching: false,
   handleFetchByQuery() {},
+  addFav: () => true,
+  favs:[],
 });
 
 export default Context;

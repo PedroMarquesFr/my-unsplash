@@ -3,6 +3,8 @@ export interface ContextData {
   doesDataExists: boolean;
   isFetching: boolean;
   handleFetchByQuery: (term: string) => void;
+  addFav: (newFav:image) => boolean;
+  favs:image[] | any[];
 }
 
 export interface image {
@@ -30,7 +32,7 @@ export interface image {
     thumb: string;
   };
   user: any;
-  width: 5184;
+  width: number;
 }
 
 // interface ApiRequest {

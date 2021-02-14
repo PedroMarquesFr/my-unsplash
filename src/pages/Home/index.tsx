@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   const { isFetching, photoArray, handleFetchByQuery, doesDataExists } = useContext(Context);
 
   useEffect(() => {
-    handleFetchByQuery('sugar');
+    handleFetchByQuery('salt');
   }, []);
 
   return (

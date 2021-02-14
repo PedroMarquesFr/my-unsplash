@@ -1,19 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import Context from "../../../contextAPI/setup";
+import { image } from "../../../contextAPI/data";
+import { Container, Image } from "./styles";
 
-import { Container, Link, Image } from "./styles";
 
-interface propsImg {
-  src: string;
-  alt: string;
-  link: string;
-}
-
-const ImagePrev: React.FC<propsImg> = ({ src, alt, link }) => {
+const ImagePrev: React.FC<{ image: image }> = ({ image }) => {
+  const { addFav } = useContext(Context);
   return (
-    <Container>
-      <Link href={link}>
-        <Image src={src} alt={alt} />
-      </Link>
+    <Container onClick={() => addFav(image)}>
+      <Image src={image.urls.regular} alt={image.alt_description} />
     </Container>
   );
 };
